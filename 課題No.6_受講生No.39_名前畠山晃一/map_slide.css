@@ -1,0 +1,141 @@
+
+
+
+/*SLIDESHOW*/
+
+/* ---------------------------------- */
+
+/* Essential Styles */
+
+.slider {
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+  margin-right: -100%;
+  position: relative;
+  z-index: 1;
+}
+
+.slide:first-child {
+  z-index: 2;
+}
+
+.slide:focus,
+.slide:focus-within {
+  z-index: 10;
+}
+
+/* ---------------------------------- */
+
+/* Animation-based styles */
+
+.slide {
+  transition: all .6s cubic-bezier(.5, 0, .5, 1), z-index .7s linear;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+}
+
+.slider:not(:focus-within) .slide:first-child,
+.slide:focus,
+.slide:focus-within {
+  transform: translateX(0%) scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* ---------------------------------- */
+
+/* Stylistic Choices */
+
+.slide {
+  height: 100vh;
+  display: flex;
+  background: black;
+  /*background: hsl( calc(360deg * ( var(--i) / var(--total))), 60%, 60%);*/
+}
+
+.slider {
+  max-width:1200px;
+  width:100%;
+  overflow: hidden;
+}
+
+.slide-nav {
+  position: absolute;
+  bottom: 30px;
+  right: 300px;
+  text-align: center;
+  z-index: 12;
+}
+
+.button {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  text-align: center;
+  z-index: 12;
+  width: 100px;
+  background-color: rgba(0, 0, 0, .4);
+  color: white;
+  font-size: 100%;
+  height: 40px;
+  cursor: pointer;
+  line-height: 40px;
+  font-family: 'Mukta', sans-serif;
+  letter-spacing: 1px;
+  transition: box-shadow 1s ease;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 0 50px rgba(255, 255, 255, .2);
+}
+
+.slide-nav a {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: white;
+  padding: 0 5px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1rem;
+  border: solid 2px transparent;
+}
+
+.slide-nav a:hover {
+  color: silver;
+}
+
+.slide img {
+  /*width: 100%;*/
+  height: 100%;
+  object-fit: cover;
+}
+
+/*responsive*/
+
+@media only screen and (max-width:950px) {
+  .main {
+    flex-direction: column;
+    height:200vh;
+  }
+  .side {
+    flex: 1;
+  }
+  .slidep {
+    flex: 1;
+  }
+  .slide-nav {
+  position: absolute;
+  bottom: Calc(30px - 100vh);
+  right: 50px;
+  text-align: center;
+  z-index: 12;
+}
+}

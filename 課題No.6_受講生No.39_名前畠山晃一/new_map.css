@@ -1,0 +1,125 @@
+/*body{padding:0;margin:0;background:#333;}
+h1{padding:0;margin:0;font-size:50%;color:white;}
+.mouse,p{font-size:50%;background: white;margin:0}
+h1,#move{margin-left:20px;padding: 5px;}*/
+
+#result{
+  position: absolute;
+  width: 800px;
+  height:650px;
+  background:black;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;
+  border: 5px double white;
+}
+#result2{
+  position: absolute;
+  width: 800px;
+  height:650px;
+  background:black;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;
+  border: 5px double white;
+}
+#result_end{
+  position: absolute;
+  width: 800px;
+  height:650px;
+  background:black;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;
+  border: 5px double white;
+}
+
+
+#result.hidden {
+  transform: translateY(-2000px);
+}
+#result2.hidden {
+  transform: translateY(-2000px);
+}
+
+.hidden {
+  transform: translateY(-2000px);
+}
+
+/*.result-title{
+  font-size: 16px;
+  color: #222222;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+#result-message{
+  font-size: 80px;
+  color:white;
+  margin-bottom: 20px;
+}*/
+
+.result-img{
+  margin-bottom: 20px;
+  height:400px;
+  overflow: hidden;
+}
+.result-img2{
+  margin-bottom: 20px;
+  height:400px;
+  overflow: hidden;
+}
+
+.result-img img{
+  width:600px;
+  /*height:300px;*/
+  overflow: hidden;
+}
+.result-img2 img{
+  width:600px;
+  /*height:300px;*/
+  overflow: hidden;
+}
+.endbtn-box{
+  color:white;
+}
+
+.form_button input{
+  padding:10px;
+  margin:10px;
+  width:170px;
+}
+
+#result-image{
+  pointer-events: none;
+  position:fixed;
+  top:10%;
+  left:30%;
+  z-index:10;
+  width:800px;}
+
+  #result-image2{
+    pointer-events: none;
+    position:fixed;
+    top:10%;
+    left:30%;
+    z-index:10;
+    width:800px;}
